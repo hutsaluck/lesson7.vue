@@ -1,47 +1,40 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+import {defineComponent} from "vue";
+import ProductList from "@/components/ProductList.vue";
+
+export default defineComponent({
+  name: "App",
+  components: {ProductList},
+  setup(){
+    return{
+
+    }
+  }
+})
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <ProductList />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+*{
+  font-family: 'Lexend', sans-serif;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+ul{
+  list-style-type: none;
+  padding: 0;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+button{
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  text-align: center;
+  color: #fff;
+  background-color: #79c56e;
+  border-radius: 6px;
 }
 </style>
